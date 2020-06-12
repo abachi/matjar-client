@@ -1,0 +1,21 @@
+$sm: 640px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+
+.container {
+  width: 100%;
+  margin: 0 auto; // center by default
+  @media (min-width: $sm) {
+    max-width: $sm;
+  }
+  @media (min-width: $md) {
+    max-width: $md;
+  }
+  @media (min-width: $lg) {
+    max-width: $lg;
+  }
+  @media (min-width: $xl) {
+    max-width: $xl;
+  }
+}

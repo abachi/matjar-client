@@ -1,0 +1,22 @@
+.testimonials {
+  padding: $p-4 0;
+} 
+.testimonials__items {
+  display: flex;
+  justify-content: center;
+}
+.testimonials__item {
+  width: 33.33%;
+  margin: 0 $m-6;
+}
+.testimonials__item .quote {
+  font-family: Poppins-Light;
+  font-size: $text-lg;
+  font-weight: 500;
+}
+.testimonials__item .name {
+  font-family: Poppins-Medium;
+  font-size: $text-base;
+  font-weight: 500;
+  margin-top: $m-3;
+}

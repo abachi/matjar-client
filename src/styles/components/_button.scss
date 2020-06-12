@@ -1,0 +1,13 @@
+.button {
+  border-radius: 11px;
+  border: none;
+  font-family: Poppins-Light;
+  font-weight: 500;
+  font-size: $text-lg;
+  padding: $p-2 $p-4;
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: $shadow-lg;
+  // background-color: $dark;
+  // color: #fff;
+}

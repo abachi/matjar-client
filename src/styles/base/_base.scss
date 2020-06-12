@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  // font-size: 62.5%; // 10px
+  // font-size: 85.7%; // 14px
+  font-size: 100%; // 16px
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: $dark;
+  font-size: $text-lg;
+  font-family: Poppins-Medium;
+  font-weight: 500;
+}
+
+body {
+  position: relative;
+  font-family: Poppins-Regular;
+  font-size: $text-base;
+  font-weight: 500;
+  color: $dark;
+  height: 100vh;
+}
+
+.section-title {
+  text-align: center;
+  font-size: $text-2xl;
+  font-family: Poppins-Medium;
+  font-weight: 500;
+  margin: $m-12 0;
+}

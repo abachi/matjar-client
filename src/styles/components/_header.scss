@@ -1,0 +1,104 @@
+.header {
+  position: fixed;
+  top: 0;
+  right: 0; left: 0;
+  z-index: 20;
+  box-shadow: $shadow-sm;
+}
+
+.header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $p-4 0;
+}
+
+.header-menu {
+  display: flex;
+}
+
+.header-menu li {
+  margin: 0 $m-6;
+}
+
+.header .user-details {
+  display: flex;
+  align-items: center;
+}
+.header .user {
+  margin-right: $m-6;
+}
+.header .cart{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: $m-6;
+}
+.header .cart .items-quantity {
+  background-color: $dark;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: $text-xs;
+  color: #fff;
+  margin-bottom: $m-2;
+  margin-left: $m-2;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100vh;
+  
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+}
+.swiper-slide-content {
+  img {
+    position: absolute;
+    top: 0; bottom: 0;
+    right: 0; left: 0;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+  }
+  .overlay{
+    position: absolute;
+    top: 0; bottom: 0;
+    right: 0; left: 0;
+    width: 100%;
+    z-index: 2;
+    background: #fff;
+    opacity: 0.4;
+  }
+  h1, p, .action-wrapper {
+    width: 40%;
+    position: relative;
+    text-align: left;
+    margin-left: $m-20;
+    z-index: 5;
+  }
+  h1 { 
+    font-size: 4rem;
+    font-family: Poppins-Medium;
+    font-weight: 500;
+  }
+  p {
+    font-size: $text-xl;
+    margin-top: $m-3;
+    font-family: Poppins-Light;
+  }
+  .action-wrapper button {
+    margin-top: $m-6;
+    outline: none;
+  }
+}

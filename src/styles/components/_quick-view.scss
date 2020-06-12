@@ -1,0 +1,130 @@
+.quick-view {
+  position: relative;
+  .overlay {
+    background-color: $dark;
+    opacity: 0.5;
+    position: fixed;
+    z-index: 30;
+    top: 0; 
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+  }
+  .product {
+    background-color: #fff;
+    position: fixed;
+    display: flex;
+    z-index: 40;
+    top: 10vh;
+    left: 10vw;
+    height: 80vh;
+    width: 80vw;
+    border-radius: 5px;
+  }  
+}
+.product__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 50%;
+}
+
+.product__image img {
+  height: $h-68;
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+}
+.product__details {
+  width: 50%;
+  padding-right: $p-8;
+  padding-top: $p-12;
+}
+
+.product__name {
+  font-size: $text-2xl;
+  font-family: Poppins-Regular;
+  font-weight: 500;
+  margin-bottom: $m-3;
+}
+.product__price {
+  font-size: $text-base;
+  font-family: Poppins-Medium;
+  font-weight: 500;
+  margin-bottom: $m-6;
+}
+.product__description {
+  line-height: $leading-relaxed;
+  margin-bottom: $m-6;
+  font-family: Poppins-Light;
+  font-weight: 500;
+}
+.product__size {
+  label {
+    display: inline-block;
+    margin-bottom: $m-1;
+  }
+  input, select {
+    padding: $p-3;
+    border: 1px solid $dark-lighter;
+    border-radius: 5px;
+    color: $dark-light;
+    font-family: Poppins-Regular;
+  }
+  .group-input {
+    display: flex;
+  }
+  .size-input {
+    margin-right: $m-12;
+    select {
+      display: inline-block;
+    }
+  }
+  .quantity-input {
+    position: relative;
+    text-align: center;
+    input {
+      text-align: center;
+      width: $w-12;
+    }
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      outline: none;
+      position: absolute;
+      top: 12px;
+      display: inline-block;
+      font-size: $text-base;
+    }
+    .decrease {left: 10px;}
+    .increase {right: 10px;}
+  }
+}
+
+.product__action {
+  width: 100%;
+  .add-to-cart, .buy-now {
+    font-size: $text-base;
+    font-family: Poppins-Medium;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid $blue;
+    border-radius: 5px;;
+    padding: $p-2 0;
+    cursor: pointer;
+  }
+  .add-to-cart {
+    color: $blue;
+    background-color: #fff;
+    margin-top: $m-12;
+    margin-bottom: $m-3;
+  }
+  .buy-now {
+    color: #fff;
+    background-color: $blue;
+  }
+}
