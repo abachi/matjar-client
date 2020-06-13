@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { setCurrentProduct } from '../actions/ui';
+import { setCurrentProduct } from '../actions/products';
 import bestSales from '../data/products';
 
 export const BestSales = () => {
@@ -11,7 +11,7 @@ export const BestSales = () => {
       <div className="container">
         <div className="best-sales__products">
           {bestSales.map((product, i) => (
-            <button className="best-sales__product" onClick={() => dispatch(setCurrentProduct(product))}>
+            <button key={i} className="best-sales__product" onClick={() => dispatch(setCurrentProduct(product))}>
               <div className="image-wrapper">
                 <img src={product.image} alt={product.name} />
                 <div className="overlay"></div>

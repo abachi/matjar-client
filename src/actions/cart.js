@@ -1,8 +1,5 @@
 
-export const increaseQuantity = () => ({
-  type: 'INCREASE_QUANTITY'
-});
-
-export const decreaseQuantity = () => ({
-  type: 'DECREASE_QUANTITY'
+export const addProductToCart = (product) => ({
+  type: 'ADD_PRODUCT_TO_CART',
+  product
 });

@@ -1,23 +1,29 @@
 import React, { useCallback, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { increaseQuantity, decreaseQuantity } from '../actions/cart';
-import { setCurrentProduct } from '../actions/ui';
+import { addProductToCart } from '../actions/cart';
+import { increaseQuantity, decreaseQuantity, setCurrentProduct } from '../actions/products';
 
 export const QuickView = () => {
-  const showQuickView = !!useSelector(state => state.ui.currentProduct);
-  const quantity = useSelector(state => state.cart.quantity);
+  const currentProduct = useSelector(state => state.products.currentProduct);
+  const showQuickView = !!currentProduct;
   const dispatch = useDispatch();
-  const product = useSelector(state => state.ui.currentProduct);
+
+  const handleAddToCart = (product) => {
+    dispatch(addProductToCart(product));
+  };
 
   const hideQuickView = useCallback(() => {
     dispatch(setCurrentProduct(null));
-  });
+  }, [dispatch]);
+
   const decreaseQuantityHandler = () => {
-    dispatch(decreaseQuantity());
+    dispatch(decreaseQuantity(currentProduct));
   }
+
   const increaseQuantityHandler = () => {
-    dispatch(increaseQuantity());
+    dispatch(increaseQuantity(currentProduct));
   }
+
   const escFunction = useCallback((event) => {
     if (event.keyCode === 27) {
       hideQuickView();
@@ -41,13 +47,13 @@ export const QuickView = () => {
         <div className="overlay" onClick={hideQuickView}></div>
         <div className="product">
           <div className="product__image">
-            <img src={product.image} alt={product.name} />
+            <img src={currentProduct.image} alt={currentProduct.name} />
           </div>
           <div className="product__details">
-            <h1 className="product__name">{product.name}</h1>
-            <p className="product__price">{product.price}</p>
+            <h1 className="product__name">{currentProduct.name}</h1>
+            <p className="product__price">{currentProduct.price}</p>
             {/* @TODO: add rating */}
-            <p className="product__description">{product.description}</p>
+            <p className="product__description">{currentProduct.description}</p>
             <div className="product__size">
               <label>SIZE</label>
               <div className="group-input">
@@ -63,13 +69,13 @@ export const QuickView = () => {
                 </div>
                 <div className="quantity-input">
                   <button className="decrease" onClick={decreaseQuantityHandler}>-</button>
-                  <input type="text" value={quantity} readOnly />
+                  <input type="text" value={currentProduct.selectedQuantity} readOnly />
                   <button className="increase" onClick={increaseQuantityHandler}>+</button>
                 </div>
               </div>
             </div>
             <div className="product__action">
-              <button className="add-to-cart">Add To Cart</button>
+              <button className="add-to-cart" onClick={() => handleAddToCart(currentProduct)}>Add To Cart</button>
             </div>
             <div className="product__action">
               <button className="buy-now">Buy Now</button>

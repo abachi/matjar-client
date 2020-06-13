@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { setCurrentProduct } from '../actions/ui';
+import { setCurrentProduct } from '../actions/products';
 import { featured } from '../data/products';
 
 const Featured = () => {
