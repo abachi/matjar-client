@@ -9,7 +9,9 @@ export const QuickView = () => {
   const dispatch = useDispatch();
 
   const handleAddToCart = (product) => {
+    // @TODO: add to localStorage
     dispatch(addProductToCart(product));
+    hideQuickView();
   };
 
   const hideQuickView = useCallback(() => {
@@ -76,9 +78,6 @@ export const QuickView = () => {
             </div>
             <div className="product__action">
               <button className="add-to-cart" onClick={() => handleAddToCart(currentProduct)}>Add To Cart</button>
-            </div>
-            <div className="product__action">
-              <button className="buy-now">Buy Now</button>
             </div>
           </div>
         </div>

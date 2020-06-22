@@ -34,3 +34,20 @@ it('should not duplicate the product and only change the quantity instead', () =
     products[0]
   ]);
 });
+
+it('should remove an item from the cart', () => {
+  const action = {
+    type: 'REMOVE_ITEM_FROM_CART',
+    item: products[0]
+  };
+  const initState = {
+    products,
+  };
+  const len = products.length;
+
+  const state = cartReducer(initState, action);
+  expect(state.products.length).toEqual(len - 1);
+  expect(state.products).toEqual(
+    products.filter(p => p.id !== products[0].id)
+  );
+});

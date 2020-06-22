@@ -1,0 +1,58 @@
+/**
+* Shows how you can use CSS to style your Element's container.
+* These classes are added to your Stripe Element by default.
+* You can override these classNames by using the options passed
+* to the CardElement component.
+* https://stripe.com/docs/js/elements_object/create_element?type=card#elements_create-options-classes
+*/
+
+.StripeElement {
+  height: 40px;
+  padding: 10px 12px;
+  width: 100%;
+  color: #32325d;
+  background-color: white;
+  border: 1px solid transparent;
+  border-radius: 4px;
+
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+  border-color: $red;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+.checkout-form {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.checkout-form__confirm-order {
+  font-family: Poppins-Light;
+  font-size: $text-lg;
+  background-color: $dark-light;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: $p-2 $p-4;
+  margin-top: $m-6;
+  cursor: pointer;
+}
+.checkout-form__success-message {
+  font-size: $text-lg;
+  font-family: Poppins-Light;
+  text-align: center;
+  margin: $m-3 0;
+   color: $green;
+}

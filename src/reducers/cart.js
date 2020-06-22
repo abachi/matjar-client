@@ -20,6 +20,10 @@ export default (state = {
       const newProducts = [...state.products, action.product]
       return { ...state, products: newProducts };
 
+    case 'REMOVE_ITEM_FROM_CART':
+      const products = state.products.filter(p => p.id !== action.item.id);
+      return { ...state, products };
+
     default:
       return state;
   }

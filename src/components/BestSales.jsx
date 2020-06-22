@@ -21,7 +21,7 @@ export const BestSales = () => {
               </div>
               <div className="details">
                 <h2 className="name">{product.name}</h2>
-                <h3 className="price">{product.price}</h3>
+                <h3 className="price">{product.currency}{product.price}</h3>
               </div>
             </button>
           ))}

@@ -1,20 +1,37 @@
 .header {
-  position: fixed;
-  top: 0;
-  right: 0; left: 0;
-  z-index: 20;
   box-shadow: $shadow-sm;
 }
 
 .header nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: $p-4 0;
+  align-items: flex-start;
+  padding: $p-4 $p-2;
+
+  @media (min-width: $sm) {
+    align-items: center;
+    .mobile-menu-icon,
+    .mobile-close-icon {
+      display: none;
+    }
+  }
+}
+
+.header nav .mobile-menu-icon,
+.header nav .mobile-close-icon
+ {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
 }
 
 .header-menu {
-  display: flex;
+  display: none;
+  flex-direction: column;
+  @media (min-width: $sm){
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .header-menu li {
@@ -32,7 +49,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: $m-6;
+  // margin-left: $m-6;
 }
 .header .cart .items-quantity {
   background-color: $dark;
@@ -50,10 +67,10 @@
 
 .swiper-container {
   width: 100%;
-  height: 100vh;
-  
+  height: 100%;
 }
 .swiper-slide {
+  min-height: 100vh;
   text-align: center;
   font-size: 18px;
   background: #fff;
@@ -62,11 +79,18 @@
   align-items: center;
 }
 .swiper-slide-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: $p-12 0;
   img {
     position: absolute;
     top: 0; bottom: 0;
     right: 0; left: 0;
     width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center;
     z-index: 1;
@@ -81,24 +105,50 @@
     opacity: 0.4;
   }
   h1, p, .action-wrapper {
-    width: 40%;
+    width: 80%;
+    margin-left: $m-6;
     position: relative;
     text-align: left;
-    margin-left: $m-20;
     z-index: 5;
+    @media (min-width: $sm){
+      width: 60%;
+    }
+    @media (min-width: $md){
+      width: 40%;
+      margin-left: $m-20;
+    }
   }
   h1 { 
-    font-size: 4rem;
+    font-size: $text-4xl;
+    margin-top: $m-8;
     font-family: Poppins-Medium;
     font-weight: 500;
+    @media (min-width: $sm){
+      margin-top: 0;
+      font-size: 3rem;
+
+    }
+    @media (min-width: $lg){
+      font-size: 4rem;
+    }
   }
   p {
     font-size: $text-xl;
-    margin-top: $m-3;
+    margin-top: $m-8;
     font-family: Poppins-Light;
   }
   .action-wrapper button {
-    margin-top: $m-6;
+    margin-top: $m-12;
     outline: none;
   }
+}
+
+.flex {
+  display: flex;
+}
+.inline-block {
+  display: inline-block;
+}
+.hide {
+  display: none;
 }
