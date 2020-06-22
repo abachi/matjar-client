@@ -53,12 +53,12 @@ export const QuickView = () => {
           </div>
           <div className="product__details">
             <h1 className="product__name">{currentProduct.name}</h1>
-            <p className="product__price">{currentProduct.price}</p>
+            <p className="product__price">${currentProduct.price} USD</p>
             {/* @TODO: add rating */}
             <p className="product__description">{currentProduct.description}</p>
             <div className="product__size">
-              <label>SIZE</label>
               <div className="group-input">
+                <label>SIZE</label>
                 <div className="size-input">
                   <select name="" id="">
                     <option value="xs">xs - 36</option>
@@ -69,6 +69,7 @@ export const QuickView = () => {
                     <option value="xxl">xxl - 46</option>
                   </select>
                 </div>
+                <label>QUANTITY</label>
                 <div className="quantity-input">
                   <button className="decrease" onClick={decreaseQuantityHandler}>-</button>
                   <input type="text" value={currentProduct.selectedQuantity} readOnly />

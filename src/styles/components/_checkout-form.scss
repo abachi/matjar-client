@@ -32,7 +32,7 @@
   background-color: #fefde5 !important;
 }
 .checkout-form {
-  width: 50%;
+  width: 80%;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -52,7 +52,19 @@
 .checkout-form__success-message {
   font-size: $text-lg;
   font-family: Poppins-Light;
-  text-align: center;
+
   margin: $m-3 0;
    color: $green;
+}
+.payment-hint {
+  margin-top: $m-2;
+  font-size: $text-xs;
+  font-weight: Poppins-medium;
+  color: gray;
+  a {
+    text-decoration: underline;
+    font-size: $text-xs;
+    color: gray;
+    margin-left: $m-2;
+  }
 }

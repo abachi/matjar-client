@@ -30,12 +30,12 @@ const Cart = () => {
                 <h1 className="cart-item__name">{item.name}</h1>
                 <p className="cart-item__quantity">{item.price} x {item.selectedQuantity}</p>
                 <div>
-                  <button className="cart-item__remove-btn" onClick={() => removeItem(item)}>remove</button>
+                  <button className="cart-item__remove-btn" onClick={() => removeItem(item)}>X</button>
                 </div>
               </div>
             );
           })}
-          {total > 0 ? <div className="total-price">Total: {total}</div> : <p className="empty-cart-text">The cart is empty</p>}
+          {total > 0 ? <div className="total-price">Total: {total} USD</div> : <p className="empty-cart-text">The cart is empty</p>}
           {cartItems.length > 0 && <CheckoutForm products={cartItems} />}
         </div>
       </div>

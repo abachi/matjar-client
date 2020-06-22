@@ -20,7 +20,7 @@ const Featured = () => {
                 <div className="overlay"></div>
                 <div className="content">
                   <h2>{product.name}</h2>
-                  <h3>{product.price}</h3>
+                  <h3>${product.price} USD</h3>
                 </div>
               </button>
             );

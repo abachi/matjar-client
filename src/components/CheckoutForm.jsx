@@ -44,15 +44,9 @@ export default function CheckoutForm({ products }) {
       }
     });
     if (result.error) {
-      // Show error to your customer (e.g., insufficient funds)
-      console.log(result.error.message);
       setLoading(false);
-
     } else {
-      // The payment has been processed!
       if (result.paymentIntent.status === 'succeeded') {
-        console.log(result, result.paymentIntent);
-        console.log('Yessssssss');
         setShowSuccessMessage(true);
       }
       setLoading(false);
@@ -60,8 +54,9 @@ export default function CheckoutForm({ products }) {
   };
   return (
     <form onSubmit={handleSubmit} className="checkout-form">
-      {showSuccessMessage && <h2 className="checkout-form__success-message">Yesss</h2>}
+      {showSuccessMessage && <h2 className="checkout-form__success-message">Payment has been made successful</h2>}
       <CardElement options={CARD_ELEMENT_OPTIONS} />
+      <p className="payment-hint">To test payment enter Card Number: 4242 4242 4242 4242 CVC: Any 3 digits Date: Any future date <a href="https://stripe.com/docs/testing">More</a></p>
       <button className="checkout-form__confirm-order" disabled={!stripe}>
         {loading ? 'Loading...' : 'Confirm order'}
       </button>

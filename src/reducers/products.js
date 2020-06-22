@@ -27,14 +27,17 @@ export default (state = initialState, action) => {
     case 'DECREASE_QUANTITY':
       currentProduct = { ...state.currentProduct };
       currentProduct.selectedQuantity -= 1;
-      return {
-        ...state, products: [...state.products.map(p => {
-          if (p.id === action.product.id) {
-            p.selectedQuantity -= 1;
-          }
-          return p;
-        })],
-        currentProduct
+      if (currentProduct.selectedQuantity > 0) {
+
+        return {
+          ...state, products: [...state.products.map(p => {
+            if (p.id === action.product.id) {
+              p.selectedQuantity -= 1;
+            }
+            return p;
+          })],
+          currentProduct
+        }
       }
 
     default:
