@@ -39,7 +39,7 @@ export default (state = initialState, action) => {
           currentProduct
         }
       }
-
+      return state;
     default:
       return state;
   }

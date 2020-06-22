@@ -1,13 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import NavbarMenu from './NavbarMenu';
 
 export const HeaderNavigation = () => {
   const cartProducts = useSelector(({ cart }) => cart.products);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const handleScrollEvent = () => {
+    if (window.scrollY > 100) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      handleScrollEvent();
+      return () => {
+        window.removeEventListener('scroll', handleScrollEvent);
+      }
+    });
+  })
 
   return (
-    <div className="header" style={{ backgroundColor: '#fff' }}>
+    <div className={`header ${isScrolled ? 'header-fixed' : ''}`} style={{ backgroundColor: '#fff' }}>
       <div className="container">
         <nav>
           <div className='logo-wrapper'>
