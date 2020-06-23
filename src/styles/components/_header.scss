@@ -1,9 +1,11 @@
 .header {
   box-shadow: $shadow-sm;
+  background-color: #fff;
+  min-height: $h-16;
+  padding-top: $p-4;
 }
 
 .header nav {
-  background-color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,6 +31,7 @@
 .header-menu {
   display: none;
   flex-direction: column;
+  text-align: center;
   @media (min-width: $sm){
     display: flex;
     flex-direction: row;
@@ -50,7 +53,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  // margin-left: $m-6;
 }
 .header .cart .items-quantity {
   background-color: $dark;
@@ -76,7 +78,6 @@
   font-size: 18px;
   background: #fff;
   display: flex;
-  // justify-content: center;
   align-items: center;
 }
 .swiper-slide-content {
@@ -158,6 +159,5 @@
   top: 0;
   left: 0; 
   right: 0;
-  min-height: $h-16;
   z-index: 100;
 }
