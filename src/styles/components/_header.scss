@@ -2,9 +2,11 @@
   box-shadow: $shadow-sm;
   background-color: #fff;
   min-height: $h-16;
-  padding-top: $p-4;
+  padding-top: $p-1;
 }
-
+.logo-wrapper {
+  margin: $m-2;
+}
 .header nav {
   display: flex;
   justify-content: space-between;

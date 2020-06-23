@@ -8,7 +8,9 @@
   width: 80%;
   margin: $m-6 $m-3;
   border: none;
-  background: none;
+  background-color: #fff;
+  box-shadow: $shadow-lg;
+  padding-bottom: $p-2;
   outline: none;
   cursor: pointer;
   @media (min-width: $md) {

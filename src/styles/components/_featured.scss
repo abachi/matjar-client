@@ -59,12 +59,14 @@
     justify-content: flex-end;
     z-index: 5;
     padding: 0 $p-4;
-    h2, h3 {
+    .product-name,
+    .product-price
+     {
       font-size: $text-lg;
       font-family: Poppins-Medium;
       font-weight: 500;
     }
-    h3 {
+    .product-price {
       margin-bottom: $m-2;
     }
   }
