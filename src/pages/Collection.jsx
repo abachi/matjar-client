@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from "react-router-dom";
 import { useSelector } from 'react-redux';
 import HeaderNavigation from '../components/HeaderNavigation';
@@ -7,16 +7,26 @@ import Footer from '../components/Footer';
 import ProductsList from '../components/ProductsList';
 import { ReactComponent as SearchIcon } from '../icons/search.svg';
 import { ReactComponent as FilterIcon } from '../icons/filter.svg';
+import getProductsBySearchText from '../selectors/getProductsBySearchText';
+import getCollectionProducts from '../selectors/getCollectionProducts';
 
 const Collection = () => {
+  const [searchText, setSearchText] = useState('');
   const { name } = useParams();
   const collection = useSelector(store => store.collections.find(c => c.name === name));
-  const products = useSelector(store => store.products.products.filter(p => p.collection === name));
+  const collectionProducts = useSelector(store => getCollectionProducts(store.products.products, name));
+  const products = getProductsBySearchText(collectionProducts, searchText);
+
+
+  const handleSearchTextChange = (e) => {
+    setSearchText(e.target.value);
+
+  }
 
   return (
     <>
       <HeaderNavigation />
-      {(!collection || products.length === 0) ? <EmptyCollection name={name} /> :
+      {(!collection) ? <EmptyCollection name={name} /> :
         <div className="collection">
           <div className="collection__header">
             <img className="collection__header-background" src={collection.image} alt={collection.title} />
@@ -32,7 +42,7 @@ const Collection = () => {
               <div className="collection__filter">
                 <form>
                   <div className="search-group">
-                    <input type="text" placeholder="Name, price..." />
+                    <input type="text" placeholder="Name, price..." onChange={handleSearchTextChange} value={searchText} />
                     <button className="feedback">
                       <SearchIcon width="18" height="18" fill="#4A5568" />
                     </button>
@@ -60,7 +70,7 @@ const Collection = () => {
               </div>
             </div>
           </div>
-          <ProductsList products={products} />
+          {products.length > 0 ? <ProductsList products={products} /> : <h2>No products</h2>}
         </div>}
       <Footer />
     </>
