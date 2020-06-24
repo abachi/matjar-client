@@ -5,6 +5,8 @@ import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 import Home from './pages/Home';
 import Cart from './pages/Cart';
+import FAQ from './pages/FAQ';
+import Collection from './pages/Collection';
 
 const stripePromise = loadStripe("pk_test_51GtsdCDZOgvDhP78eHla5TJvXhcVU2kXjNEyCl5pbDs1LKot0O60SbFIa6C2nwHAYJYWCxdp8fnXuiUGquTqvRDW00Da879ZrJ");
 
@@ -25,6 +27,8 @@ const App = () => {
         <Route path="/" component={Home} exact />
         <Route path="/shop" component={Home} exact />
         <Route path="/cart" component={CheckOut} exact />
+        <Route path="/faq" component={FAQ} exact />
+        <Route path="/collection/:name" component={Collection} exact />
       </Switch>
     </Router>
   );

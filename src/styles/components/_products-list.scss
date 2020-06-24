@@ -1,0 +1,85 @@
+.products-list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.product {
+  width: 80%;
+  margin: $m-6 $m-3;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: $shadow-lg;
+  padding-bottom: $p-2;
+  outline: none;
+  cursor: pointer;
+  @media (min-width: $md) {
+    width: 25%;
+  }
+}
+
+.product .image-wrapper {
+  position: relative;
+  height: $h-66;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .overlay {
+    display: none;
+    opacity: 0.35;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; bottom: 0;
+    right: 0; left: 0;
+    background-color: $dark;
+  }
+  .overlay-content {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: $text-base;
+    font-family: Poppins-Medium;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; bottom: 0;
+    right: 0; left: 0;
+    color: #fff;
+  }
+  &:hover {
+    .overlay {
+      display: block;
+    }
+    .overlay-content {
+      display: flex;
+    }
+  }
+}
+
+.product .details {
+  margin: 0 $m-2;
+  .name{
+    font-size: $text-base;
+    font-family: Poppins-Light;
+    font-weight: 500;
+    text-align: center;
+    line-height: $leading-relaxed;
+    margin-top: $m-2;
+  }
+  .price {
+    font-size: $text-lg;
+    font-family: Poppins-Medium;
+    font-weight: 500;
+    text-align: center;
+  }
+}

@@ -2,11 +2,11 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { setCurrentProduct } from '../actions/products';
 
-const BestSaleProduct = ({ product }) => {
+const Product = ({ product }) => {
   const dispatch = useDispatch();
   const { name, price, image, currency } = product;
   return (
-    <button className="best-sales__product" onClick={() => dispatch(setCurrentProduct(product))}>
+    <button className="product" onClick={() => dispatch(setCurrentProduct(product))}>
       <div className="image-wrapper">
         <img src={image} alt={name} />
         <div className="overlay"></div>
@@ -22,4 +22,4 @@ const BestSaleProduct = ({ product }) => {
   );
 }
 
-export default BestSaleProduct;
+export default Product;
