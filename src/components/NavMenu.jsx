@@ -7,9 +7,20 @@ const NavMenu = () => {
   return (
     <ul className="header-menu" >
       <li><CloseMenu /></li>
-      {menuItems.map(({ to, text }, i) => (
+      {menuItems.map(({ to, text, collections }, i) => (
         <li key={i}>
-          <Link to={to}>{text}</Link>
+          {collections ? (
+            <>
+              <Link to={to}>{text}</Link>
+              <ul className="header-menu__collections">
+                {collections.map((name, i) => (
+                  <li key={i}>
+                    <Link to={`/collection/${name}`}>{name}</Link>
+                  </li>
+                ))}
+              </ul>
+            </>
+          ) : <Link to={to}>{text}</Link>}
         </li>
       ))}
     </ul>

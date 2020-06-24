@@ -18,7 +18,7 @@ export const HeaderNavigation = () => {
         window.removeEventListener('scroll', handleScrollEvent);
       }
     });
-  })
+  });
 
   return (
     <header className={`header ${isScrolled ? 'header-fixed' : ''}`}>

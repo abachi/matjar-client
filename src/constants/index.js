@@ -7,6 +7,7 @@ export const menuItems = [
   {
     text: 'Shop',
     to: '/shop',
+    collections: ['men', 'women', 'kids', 'girls', 'boys']
   },
   {
     text: 'Blog',

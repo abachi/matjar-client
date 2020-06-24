@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import { useSelector } from 'react-redux';
 import HeaderNavigation from '../components/HeaderNavigation';
 import EmptyCollection from '../components/EmptyCollection';
-import Product from '../components/Product';
 import Footer from '../components/Footer';
 import ProductsList from '../components/ProductsList';
 import { ReactComponent as SearchIcon } from '../icons/search.svg';
