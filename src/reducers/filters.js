@@ -1,7 +1,7 @@
 export default (state = {
   tag: 'all',
-  minPrice: undefined,
-  maxPrice: undefined,
+  minPrice: 0,
+  maxPrice: 0,
   searchText: '',
 }, action) => {
 

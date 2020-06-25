@@ -4,13 +4,13 @@ const initState = [
     image: "/images/category-man-bg.jpg",
     subCollections: [
       {
-        name: 'Shirts',
+        name: 'shirts',
       },
       {
-        name: 'Pants',
+        name: 'pants',
       },
       {
-        name: 'Jackets',
+        name: 'jackets',
       },
 
     ]
@@ -20,13 +20,13 @@ const initState = [
     image: "/images/category-women-bg.jpg",
     subCollections: [
       {
-        name: 'Shirts',
+        name: 'shirts',
       },
       {
-        name: 'Pants',
+        name: 'pants',
       },
       {
-        name: 'Jackets',
+        name: 'jackets',
       },
     ]
   }

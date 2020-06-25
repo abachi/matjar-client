@@ -6,16 +6,8 @@ import { ReactComponent as TwitterIcon } from '../icons/twitter.svg';
 export const menuItems = [
   {
     text: 'Shop',
-    to: '/shop',
-    collections: ['men', 'women', 'kids', 'girls', 'boys']
-  },
-  {
-    text: 'Blog',
-    to: '/blog',
-  },
-  {
-    text: 'FAQ',
-    to: '/faq',
+    to: '#',
+    collections: ['men', 'women']
   }
 ];
 

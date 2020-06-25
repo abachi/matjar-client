@@ -53,6 +53,7 @@
   width: 100%;
   text-align: center;
   text-transform: capitalize;
+  font-size: $text-5xl;
 }
 .collection_filter-show {
   z-index: 30;
@@ -67,14 +68,31 @@
   }
 
 }
-.collection_filter-hide {
-  border: none;
+.collection_filter-clear,
+.collection_filter-hide  {
   background: none;
-  color: $dark;
+  cursor: pointer;
+  border: none;
+  font-family: Poppins-Regular;
+  color: $blue;
+  margin-top: $m-3;
+  &:hover {
+    opacity: .5;
+  }
+
+}
+.collection_filter-hide {
   @media (min-width: $sm){
     display: none;
   }
 }
+.collection_filter-clear {
+  @media (min-width: $md){
+    margin-top: 0;
+  }
+}
+
+
 .collection__filter-wrapper {
   display: none;
   position: fixed;
@@ -97,6 +115,7 @@
   width: 50%;
   margin: 0 auto;
   margin-top: $m-12;
+  box-shadow: $shadow;
 
   @media (min-width: $md){
     width: 80%;
@@ -128,6 +147,7 @@
     margin: $m-2 $m-2;
   }
 }
+
 .sub-collections .sub-collection__item button {
   padding: $p-2 $p-4;
   min-width: $w-20;
@@ -137,6 +157,7 @@
   outline: none;
   cursor: pointer;
   color: $dark-lighter;
+  text-transform: capitalize;
   &.active{
     background-color: $green;
     color: #fff;
@@ -182,7 +203,7 @@
     margin-top: 0;
   }
   input{
-    max-width: $w-20;
+    max-width: $w-24;
     margin: $m-2;
     padding: $p-1 $p-2;
     font-family: Poppins-Regular;

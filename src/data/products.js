@@ -7,7 +7,6 @@ export const featured = [
     description: 'When things go from “simply spritzing” to “straight soupy,” reach for the Submariner. Our modern adaptation of a classic Navy-issued jacket of the same name comes complete with hand warming pockets and custom Taylor Stitch anchor buttons. This overcoat’s an ancestral forebearer to your burly peacoat, built for versatility.',
     selectedQuantity: 1,
     currency: '$',
-    collection: 'men',
     tags: ['shirts', 'pants', 'jacket'],
   },
   {
@@ -18,7 +17,6 @@ export const featured = [
     selectedQuantity: 1,
     currency: '$',
     tags: ['shirts'],
-    collection: 'men',
     description: 'When things go from “simply spritzing” to “straight soupy,” reach for the Submariner. Our modern adaptation of a classic Navy-issued jacket of the same name comes complete with hand warming pockets and custom Taylor Stitch anchor buttons. This overcoat’s an ancestral forebearer to your burly peacoat, built for versatility.'
   },
   {
@@ -28,7 +26,7 @@ export const featured = [
     image: '/images/grid-3.jpg',
     selectedQuantity: 1,
     currency: '$',
-    collection: 'men',
+    tags: ['pants'],
     description: 'When things go from “simply spritzing” to “straight soupy,” reach for the Submariner. Our modern adaptation of a classic Navy-issued jacket of the same name comes complete with hand warming pockets and custom Taylor Stitch anchor buttons. This overcoat’s an ancestral forebearer to your burly peacoat, built for versatility.'
   },
   {
@@ -38,7 +36,7 @@ export const featured = [
     image: '/images/grid-4.jpg',
     selectedQuantity: 1,
     currency: '$',
-    collection: 'men',
+    tags: ['pants'],
     description: 'When things go from “simply spritzing” to “straight soupy,” reach for the Submariner. Our modern adaptation of a classic Navy-issued jacket of the same name comes complete with hand warming pockets and custom Taylor Stitch anchor buttons. This overcoat’s an ancestral forebearer to your burly peacoat, built for versatility.'
   },
   {
@@ -48,6 +46,7 @@ export const featured = [
     image: '/images/grid-5.jpg',
     collection: 'women',
     selectedQuantity: 1,
+    tags: ['jackets'],
     currency: '$',
     description: 'When things go from “simply spritzing” to “straight soupy,” reach for the Submariner. Our modern adaptation of a classic Navy-issued jacket of the same name comes complete with hand warming pockets and custom Taylor Stitch anchor buttons. This overcoat’s an ancestral forebearer to your burly peacoat, built for versatility.'
   },
@@ -62,6 +61,7 @@ export const products = [
     selectedQuantity: 1,
     collection: 'women',
     currency: '$',
+    tags: ['jackets'],
     description: 'When things go from “simply spritzing” to “straight soupy,” reach for the Submariner. Our modern adaptation of a classic Navy-issued jacket of the same name comes complete with hand warming pockets and custom Taylor Stitch anchor buttons. This overcoat’s an ancestral forebearer to your burly peacoat, built for versatility.'
   },
 
@@ -71,7 +71,6 @@ export const products = [
     name: 'The product name goes here',
     price: 249.99,
     selectedQuantity: 1,
-    collection: 'men',
     currency: '$',
     description: 'When things go from “simply spritzing” to “straight soupy,” reach for the Submariner. Our modern adaptation of a classic Navy-issued jacket of the same name comes complete with hand warming pockets and custom Taylor Stitch anchor buttons. This overcoat’s an ancestral forebearer to your burly peacoat, built for versatility.'
   },
@@ -80,7 +79,6 @@ export const products = [
     image: '/images/product-3.jpg',
     name: 'The product name goes here',
     price: 185.00,
-    collection: 'men',
     selectedQuantity: 1,
     tags: ['pants'],
     currency: '$',
@@ -94,6 +92,7 @@ export const products = [
     collection: 'women',
     selectedQuantity: 1,
     currency: '$',
+    tags: ['pants'],
     description: 'When things go from “simply spritzing” to “straight soupy,” reach for the Submariner. Our modern adaptation of a classic Navy-issued jacket of the same name comes complete with hand warming pockets and custom Taylor Stitch anchor buttons. This overcoat’s an ancestral forebearer to your burly peacoat, built for versatility.'
   },
   {
@@ -171,7 +170,107 @@ export const products = [
     selectedQuantity: 1,
     currency: '$',
     description: 'When things go from “simply spritzing” to “straight soupy,” reach for the Submariner. Our modern adaptation of a classic Navy-issued jacket of the same name comes complete with hand warming pockets and custom Taylor Stitch anchor buttons. This overcoat’s an ancestral forebearer to your burly peacoat, built for versatility.'
-  },];
+  },
+  {
+    id: 17,
+    image: '/images/category-man-1.jpg',
+    name: 'The product name goes here',
+    price: 500.00,
+    selectedQuantity: 1,
+    collection: 'men',
+    tags: ['shirts'],
+    currency: '$',
+    description: 'When things go from “simply spritzing” to “straight soupy,” reach for the Submariner. Our modern adaptation of a classic Navy-issued jacket of the same name comes complete with hand warming pockets and custom Taylor Stitch anchor buttons. This overcoat’s an ancestral forebearer to your burly peacoat, built for versatility.'
+  },
+  {
+    id: 18,
+    image: '/images/category-man-2.jpg',
+    name: 'The product name goes here',
+    price: 400.00,
+    selectedQuantity: 1,
+    collection: 'men',
+    tags: ['jackets'],
+    currency: '$',
+    description: 'When things go from “simply spritzing” to “straight soupy,” reach for the Submariner. Our modern adaptation of a classic Navy-issued jacket of the same name comes complete with hand warming pockets and custom Taylor Stitch anchor buttons. This overcoat’s an ancestral forebearer to your burly peacoat, built for versatility.'
+  },
+  {
+    id: 19,
+    image: '/images/category-man-3.jpg',
+    name: 'The product name goes here',
+    price: 600.00,
+    selectedQuantity: 1,
+    collection: 'men',
+    tags: ['jackets', 'pants'],
+    currency: '$',
+    description: 'When things go from “simply spritzing” to “straight soupy,” reach for the Submariner. Our modern adaptation of a classic Navy-issued jacket of the same name comes complete with hand warming pockets and custom Taylor Stitch anchor buttons. This overcoat’s an ancestral forebearer to your burly peacoat, built for versatility.'
+  },
+  {
+    id: 20,
+    image: '/images/category-man-4.jpg',
+    name: 'The product name goes here',
+    price: 750.00,
+    selectedQuantity: 1,
+    collection: 'men',
+    tags: ['jackets'],
+    currency: '$',
+    description: 'When things go from “simply spritzing” to “straight soupy,” reach for the Submariner. Our modern adaptation of a classic Navy-issued jacket of the same name comes complete with hand warming pockets and custom Taylor Stitch anchor buttons. This overcoat’s an ancestral forebearer to your burly peacoat, built for versatility.'
+  },
+  {
+    id: 21,
+    image: '/images/category-man-5.jpg',
+    name: 'The product name goes here',
+    price: 300.00,
+    selectedQuantity: 1,
+    collection: 'men',
+    tags: ['pants'],
+    currency: '$',
+    description: 'When things go from “simply spritzing” to “straight soupy,” reach for the Submariner. Our modern adaptation of a classic Navy-issued jacket of the same name comes complete with hand warming pockets and custom Taylor Stitch anchor buttons. This overcoat’s an ancestral forebearer to your burly peacoat, built for versatility.'
+  },
+  {
+    id: 22,
+    image: '/images/category-man-6.jpg',
+    name: 'The product name goes here',
+    price: 1200.00,
+    selectedQuantity: 1,
+    collection: 'men',
+    tags: ['jackets'],
+    currency: '$',
+    description: 'When things go from “simply spritzing” to “straight soupy,” reach for the Submariner. Our modern adaptation of a classic Navy-issued jacket of the same name comes complete with hand warming pockets and custom Taylor Stitch anchor buttons. This overcoat’s an ancestral forebearer to your burly peacoat, built for versatility.'
+  },
+  {
+    id: 23,
+    image: '/images/category-man-7.jpg',
+    name: 'The product name goes here',
+    price: 750.00,
+    selectedQuantity: 1,
+    collection: 'men',
+    tags: ['jackets'],
+    currency: '$',
+    description: 'When things go from “simply spritzing” to “straight soupy,” reach for the Submariner. Our modern adaptation of a classic Navy-issued jacket of the same name comes complete with hand warming pockets and custom Taylor Stitch anchor buttons. This overcoat’s an ancestral forebearer to your burly peacoat, built for versatility.'
+  },
+  {
+    id: 24,
+    image: '/images/category-man-8.jpg',
+    name: 'The product name goes here',
+    price: 1500.00,
+    selectedQuantity: 1,
+    collection: 'men',
+    tags: ['jackets', 'pants'],
+    currency: '$',
+    description: 'When things go from “simply spritzing” to “straight soupy,” reach for the Submariner. Our modern adaptation of a classic Navy-issued jacket of the same name comes complete with hand warming pockets and custom Taylor Stitch anchor buttons. This overcoat’s an ancestral forebearer to your burly peacoat, built for versatility.'
+  },
+  {
+    id: 25,
+    image: '/images/category-man-9.jpg',
+    name: 'The product name goes here',
+    price: 2000.00,
+    selectedQuantity: 1,
+    collection: 'men',
+    currency: '$',
+    tags: ['shirts'],
+    description: 'When things go from “simply spritzing” to “straight soupy,” reach for the Submariner. Our modern adaptation of a classic Navy-issued jacket of the same name comes complete with hand warming pockets and custom Taylor Stitch anchor buttons. This overcoat’s an ancestral forebearer to your burly peacoat, built for versatility.'
+  },
+];
 
 
 export default [...products, ...featured];
